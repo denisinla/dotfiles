@@ -8,7 +8,8 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh private scrotwm.conf Xresources"    # list of files/folders to symlink in homedir
+files="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
+themes="trajan.zsh-theme"
 
 ##########
 
@@ -41,6 +42,12 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
         chsh -s $(which zsh)
     fi
+    # Added trajan theme
+    for theme in $themes; do
+      echo "Added $theme to ZSH"
+      mv $dir/$theme ~/.oh-my-zsh/themes/$theme
+    done
+
 else
     # If zsh isn't installed, get the platform of the current machine
     platform=$(uname);
