@@ -1,1 +1,0 @@
-/Users/dkabistan/dotfiles/trajan-theme
