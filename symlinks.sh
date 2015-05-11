@@ -32,11 +32,12 @@ for file in $files; do
 done
 
 install_zsh () {
-# Test to see if zshell is installed.  If it is:
+# Test to see if zshell is installed:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     echo "ZSH installed!"
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-    if [ ! -d $HOME/.oh-my-zsh/ ]; then
+    if [[ ! -d $HOME/.oh-my-zsh ]]; then
+      echo "Installing oh-my-zsh "
       git clone http://github.com/robbyrussell/oh-my-zsh.git
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
