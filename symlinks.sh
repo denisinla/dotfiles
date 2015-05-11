@@ -44,7 +44,9 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     fi
     # Added trajan theme
     for theme in $themes; do
-      echo "Added $theme to ZSH"
+      echo "Deleting old $theme from ZSH"
+      rm ~/.oh-my-zsh/themes/$theme
+      echo "Add $theme to ZSH"
       mv $dir/$theme ~/.oh-my-zsh/themes/$theme
     done
 
