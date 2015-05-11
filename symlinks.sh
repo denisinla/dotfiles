@@ -47,7 +47,7 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
       echo "Deleting old $theme from ZSH"
       rm ~/.oh-my-zsh/themes/$theme
       echo "Add $theme to ZSH"
-      mv $dir/$theme ~/.oh-my-zsh/themes/$theme
+      mv $dir/themes/$theme ~/.oh-my-zsh/themes/$theme
     done
 
 else
