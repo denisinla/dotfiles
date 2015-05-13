@@ -5,3 +5,6 @@ export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 
 # RVM Path Settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# golang environment variables
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
