@@ -1,5 +1,9 @@
 # Aliases
 alias mou="open -a Mou"
+alias refresh="exec $SHELL -l"
+
+# boot2docker aliases
+alias bdstatus="boot2docker status"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
