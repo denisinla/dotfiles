@@ -2,6 +2,9 @@
 alias mou="open -a Mou"
 alias refresh="exec $SHELL -l"
 
+# I'm lazy to push
+alias pushall="git push stash master && git push heroku master"
+
 # boot2docker aliases
 alias bdstatus="boot2docker status"
 
