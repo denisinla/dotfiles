@@ -5,6 +5,9 @@ alias refresh="exec $SHELL -l"
 # I'm lazy to push
 alias pushall="git push stash master && git push heroku master"
 
+# HUB: CLI-wrapper for git (https://hub.github.com/)
+alias git="hub"
+
 # boot2docker aliases
 alias bdstatus="boot2docker status"
 
