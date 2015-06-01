@@ -2,7 +2,7 @@
 alias mou="open -a Mou"
 alias refresh="exec $SHELL -l"
 
-# I'm lazy to push
+# push to all my remotes
 alias pushall="git push stash master && git push heroku master"
 
 # HUB: CLI-wrapper for git (https://hub.github.com/)
