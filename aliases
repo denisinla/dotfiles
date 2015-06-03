@@ -5,11 +5,17 @@ alias refresh="exec $SHELL -l"
 # push to all my remotes
 alias pushall="git push stash master && git push heroku master"
 
+# docker-compose up and running
+alias dcup="docker-compose up"
+alias dcb="docker-compose build"
+
 # HUB: CLI-wrapper for git (https://hub.github.com/)
 alias git="hub"
 
 # boot2docker aliases
 alias bdstatus="boot2docker status"
+alias bdd="boot2docker down"
+alias bdup="boot2docker up"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
