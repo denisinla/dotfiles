@@ -4,10 +4,12 @@ alias refresh="exec $SHELL -l"
 
 # push to all my remotes
 alias pushall="git push stash master && git push heroku master"
+alias stashup="git push stash master"
 
 # docker-compose up and running
 alias dcup="docker-compose up"
 alias dcb="docker-compose build"
+alias ddaimg="docker rmi $(docker images -q)"
 
 # HUB: CLI-wrapper for git (https://hub.github.com/)
 alias git="hub"
