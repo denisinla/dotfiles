@@ -18,6 +18,7 @@ alias git="hub"
 alias bdstatus="boot2docker status"
 alias bdd="boot2docker down"
 alias bdup="boot2docker up"
+alias bdip="boot2docker ip"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
