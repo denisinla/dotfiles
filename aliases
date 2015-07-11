@@ -10,6 +10,8 @@ alias stashup="git push stash master"
 alias dcup="docker-compose up"
 alias dcb="docker-compose build"
 alias ddaimg="docker rmi $(docker images -q)"
+alias dstop="docker stop $(docker ps -a -q)"
+alias dshow="docker ps -a"
 
 # HUB: CLI-wrapper for git (https://hub.github.com/)
 alias git="hub"
@@ -20,6 +22,7 @@ alias bdd="boot2docker down"
 alias bdup="boot2docker up"
 alias bdip="boot2docker ip"
 alias bdrestart="boot2docker restart"
+alias bdreup="boot2docker ssh sudo /etc/init.d/docker restart"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
