@@ -100,12 +100,6 @@ noremap <leader>q :CtrlP<CR>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_a = airline#section#create(['mode','','branch'])
-"https://github.com/Yggdroot/indentLine
-"let g:indentLine_char = '.'
-"let g:indentLine_color_term = 239
-"let g:indentLine_enabled = 1
-"https://github.com/airblade/vim-gitgutter
-" set updatetime=250
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
