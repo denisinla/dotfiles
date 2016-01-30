@@ -11,7 +11,7 @@ set number
 set wrap
 set showmatch
 set autoindent
-set copyindent
+"set copyindent
 set noerrorbells
 set ttyfast
 set ruler
