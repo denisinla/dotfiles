@@ -16,6 +16,7 @@ set noerrorbells
 set ttyfast
 set ruler
 set autoread
+set laststatus=2
 " -------------------------------------------------------------------
 " appearances
 " -------------------------------------------------------------------
