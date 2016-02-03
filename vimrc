@@ -100,6 +100,8 @@ noremap <leader>q :CtrlP<CR>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_a = airline#section#create(['mode','','branch'])
+" Add dots per spacing ...
+set list listchars=tab:»-,trail:·,extends:»,precedes:«
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
