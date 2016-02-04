@@ -97,6 +97,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " CtrlP mapping
 let g:ctrlp_cmd = 'CtrlP'
 noremap <leader>q :CtrlP<CR>
+let g:ctrlp_max_files=0
 " airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
