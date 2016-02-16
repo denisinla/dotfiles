@@ -13,10 +13,13 @@ set showmatch
 "set autoindent
 "set copyindent
 set noerrorbells
+set visualbell
 set ttyfast
 set ruler
 set autoread
 set laststatus=2
+set hlsearch
+set incsearch
 " -------------------------------------------------------------------
 " appearances
 " -------------------------------------------------------------------
@@ -73,14 +76,6 @@ set shiftwidth=2
 set softtabstop=2
 set ts=2
 set expandtab
-" --------------------------------------------------------------------
-"  highlight search terms
-set hlsearch
-set incsearch
-" --------------------------------------------------------------------
-" bells I dislike so much, I do ...
-set noerrorbells
-set visualbell
 " --------------------------------------------------------------------
 " Remove trailing whitespace in Ruby/JS/HTML
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
