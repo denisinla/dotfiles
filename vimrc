@@ -75,6 +75,8 @@ nnoremap ; :
 " vimrc edit/source
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" remap buffer listing
+nnoremap <leader>f :bn<cr>
 " CtrlP mapping
 let g:ctrlp_cmd = 'CtrlP'
 noremap <leader>q :CtrlP<CR>
