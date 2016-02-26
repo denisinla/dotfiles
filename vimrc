@@ -50,6 +50,13 @@ set softtabstop=2
 set ts=2
 set expandtab
 " --------------------------------------------------------------------
+" code folding
+" --------------------------------------------------------------------
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+" --------------------------------------------------------------------
 " Remove trailing whitespace in Ruby/JS/HTML
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
 " --------------------------------------------------------------------
@@ -85,8 +92,9 @@ let g:ctrlp_max_files=0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_a = airline#section#create(['mode','','branch'])
-" Add dots per spacing ...
-set list listchars=tab:»-,trail:·,extends:»,precedes:«
+" Add indent guides based on tabs
+set list
+set listchars=tab:\ \ 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
