@@ -86,7 +86,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>f :bn<cr>
 " CtrlP mapping
 let g:ctrlp_cmd = 'CtrlP'
-noremap <leader>q :CtrlP<CR>
+noremap <leader>q :FZF<CR>
 let g:ctrlp_max_files=0
 " airline configuration
 let g:airline_powerline_fonts = 1
@@ -95,6 +95,9 @@ let g:airline_section_a = airline#section#create(['mode','','branch'])
 " Add indent guides based on tabs
 set list
 set listchars=tab:\ \ 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+let g:gitgutter_highlight_lines = 0
+set rtp+=~/.fzf
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
