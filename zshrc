@@ -29,3 +29,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/exports
 source $HOME/dotfiles/aliases
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
