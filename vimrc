@@ -60,9 +60,10 @@ set foldlevel=1
 " Remove trailing whitespace in Ruby/JS/HTML
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
 " --------------------------------------------------------------------
-" map leader
-let mapleader = ","
-let g:mapleader = ","
+" map leader > YASSS to spaces!
+let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
+" --------------------------------------------------------------------
 " MAP NERDTree
 map <C-n> :NERDTreeToggle<cr>
 " NERDTree Sidebar Size
@@ -83,11 +84,18 @@ nnoremap ; :
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " remap buffer listing
-nnoremap <leader>f :bn<cr>
-" CtrlP mapping
-let g:ctrlp_cmd = 'CtrlP'
-noremap <leader>q :FZF<CR>
-let g:ctrlp_max_files=0
+nnoremap <leader>z :bn<cr>
+" -------------------------------------------------------------------
+" fzf customizations
+" -------------------------------------------------------------------
+set rtp+=~/.fzf
+nnoremap <leader>o :FZF<CR>
+" fzf > :BLines search lines in current buffer
+nnoremap <leader>f :BLines<CR>
+" -------------------------------------------------------------------
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+" -------------------------------------------------------------------
 " airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -97,7 +105,6 @@ set list
 set listchars=tab:\ \ 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 let g:gitgutter_highlight_lines = 0
-set rtp+=~/.fzf
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
