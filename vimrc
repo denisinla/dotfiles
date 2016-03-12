@@ -61,8 +61,10 @@ set foldlevel=1
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
 " --------------------------------------------------------------------
 " map leader > YASSS to spaces!
-let mapleader = "\<Space>"
-let g:mapleader = "\<Space>"
+"let mapleader = "\<Space>"
+"let g:mapleader = "\<Space>"
+let mapleader = ","
+let g:mapleader = ","
 " --------------------------------------------------------------------
 " MAP NERDTree
 map <C-n> :NERDTreeToggle<cr>
@@ -76,7 +78,7 @@ augroup AutoReloadVimRC
   au BufWritePost .vimrc so ~/.vimrc
 augroup END
 " -------------------------------------------------------------------
-" lets remape ; : ok!
+" lets remap ; : ok!
 " this will allow you to use ;w and strip a few steps ok!
 " -------------------------------------------------------------------
 nnoremap ; :
