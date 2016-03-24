@@ -107,6 +107,10 @@ set list
 set listchars=tab:\ \ 
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
 let g:gitgutter_highlight_lines = 0
+" -------------------------------------------------------------------
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+" backspace in insert mode will delete
+set backspace=indent,eol,start
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
