@@ -87,6 +87,7 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " remap buffer listing
 nnoremap <leader>z :bn<cr>
+map <leader>a :%y+<cr>
 " -------------------------------------------------------------------
 " fzf customizations
 " -------------------------------------------------------------------
