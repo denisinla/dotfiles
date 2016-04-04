@@ -86,17 +86,17 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " remap buffer listing
 nnoremap <leader>z :bn<cr>
-map <leader>a :%y+<cr>
 " -------------------------------------------------------------------
 " fzf customizations
 " -------------------------------------------------------------------
 set rtp+=~/.fzf
-nnoremap <leader>o :FZF<CR>
+nnoremap <leader>o :FZF<cr>
 " fzf > :BLines search lines in current buffer
-nnoremap <leader>f :BLines<CR>
+nnoremap <leader>f :BLines<cr>
 " -------------------------------------------------------------------
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>a :%y+<cr>
 " -------------------------------------------------------------------
 " airline configuration
 let g:airline_powerline_fonts = 1
