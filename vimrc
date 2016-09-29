@@ -9,8 +9,6 @@ set encoding=utf-8
 set number
 set wrap
 set showmatch
-"set autoindent
-"set copyindent
 set noerrorbells
 set visualbell
 set ttyfast
@@ -23,18 +21,7 @@ set incsearch
 " appearances
 " -------------------------------------------------------------------
 syntax on
-if has('gui_running')
-	set background=light
-else
-	set background=dark
-endif
-" -------------------------------------------------------------------
-" vimbrant vim theme
-" -------------------------------------------------------------------
-"colorscheme vimbrant
-"highlight ColorColumn ctermbg=7
-"highlight ColorColumn guibg=#DDDDDD
-colorscheme gruvbox
+colorscheme dracula
 " --------------------------------------------------------------------
 " Backups
 set nobackup
@@ -60,8 +47,6 @@ set foldlevel=1
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
 " --------------------------------------------------------------------
 " map leader > YASSS to spaces!
-"let mapleader = "\<Space>"
-"let g:mapleader = "\<Space>"
 let mapleader = ","
 let g:mapleader = ","
 " --------------------------------------------------------------------
@@ -101,7 +86,7 @@ nnoremap <leader>a :%y+<cr>
 " airline configuration
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_section_a = airline#section#create(['mode','','branch'])
+let g:airline_theme='dracula'
 " Add indent guides based on tabs
 set list
 set listchars=tab:\ \ 
