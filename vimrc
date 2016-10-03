@@ -44,9 +44,10 @@ set nofoldenable
 set foldlevel=1
 " --------------------------------------------------------------------
 " Remove trailing whitespace in Ruby/JS/HTML
+" --------------------------------------------------------------------
 autocmd BufWritePre *.rb,*.coffee,*.js.eco,*.erb :%s/\s\+$//e
 " --------------------------------------------------------------------
-" map leader > YASSS to spaces!
+" map leader
 let mapleader = ","
 let g:mapleader = ","
 " --------------------------------------------------------------------
@@ -66,27 +67,41 @@ augroup END
 " this will allow you to use ;w and strip a few steps ok!
 " -------------------------------------------------------------------
 nnoremap ; :
+" -------------------------------------------------------------------
 " vimrc edit/source
+" -------------------------------------------------------------------
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" -------------------------------------------------------------------
+" zshrc edit/source
+" -------------------------------------------------------------------
+nnoremap <leader>ez :vsp ~/dotfiles/zshrc<cr>
+" -------------------------------------------------------------------
 " remap buffer listing
+" -------------------------------------------------------------------
 nnoremap <leader>z :bn<cr>
 " -------------------------------------------------------------------
 " fzf customizations
 " -------------------------------------------------------------------
 set rtp+=~/.fzf
 nnoremap <leader>o :FZF<cr>
+" -------------------------------------------------------------------
 " fzf > :BLines search lines in current buffer
+" -------------------------------------------------------------------
 nnoremap <leader>f :BLines<cr>
+" -------------------------------------------------------------------
+" write/quit/select all in current buffer
 " -------------------------------------------------------------------
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>a :%y+<cr>
 " -------------------------------------------------------------------
 " airline configuration
+" -------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dracula'
+" -------------------------------------------------------------------
 " Add indent guides based on tabs
 set list
 set listchars=tab:\ \ 
@@ -96,7 +111,9 @@ let g:gitgutter_highlight_lines = 0
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
 " backspace in insert mode will delete
 set backspace=indent,eol,start
+" ------------------------------------------------------------------
 " Enable basic mouse behavior such as resizing buffers.
+" ------------------------------------------------------------------
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
  set ttymouse=xterm2
