@@ -6,7 +6,6 @@ filetype plugin indent on
 " -------------------------------------------------------------------
 set nocompatible
 set encoding=utf-8
-set number
 set wrap
 set showmatch
 set noerrorbells
@@ -83,7 +82,8 @@ nnoremap <leader>z :bn<cr>
 " -------------------------------------------------------------------
 " fzf customizations
 " -------------------------------------------------------------------
-set rtp+=~/.fzf
+"set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 nnoremap <leader>o :FZF<cr>
 " -------------------------------------------------------------------
 " fzf > :BLines search lines in current buffer
@@ -95,6 +95,7 @@ nnoremap <leader>f :BLines<cr>
 nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>a :%y+<cr>
+nnoremap <leader>g :Ag<cr>
 " -------------------------------------------------------------------
 " airline configuration
 " -------------------------------------------------------------------
