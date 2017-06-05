@@ -14,20 +14,29 @@ DISABLE_AUTO_TITLE="true"
 plugins=(git tmux)
 
 # user configuration
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # RVM to PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Always work in a tmux session if tmux is installed
- if which tmux 2>&1 >/dev/null; then
+if which tmux 2>&1 >/dev/null; then
   if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
     tmux attach -t dev || tmux new -s dev; exit
   fi
- fi
+fi
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/dotfiles/exports
 source $HOME/dotfiles/aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+PATH="$HOME/.themekit:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias craftman="$HOME/.craftman/bin/craftman"
