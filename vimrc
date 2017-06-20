@@ -21,6 +21,7 @@ set incsearch
 " -------------------------------------------------------------------
 syntax on
 colorscheme dracula
+"colorscheme gruvbox
 " --------------------------------------------------------------------
 " Backups
 set nobackup
@@ -96,12 +97,20 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 nnoremap <leader>a :%y+<cr>
 nnoremap <leader>g :Ag<cr>
+nnoremap <leader>s :Gwrite<cr>
+nnoremap <leader>c :Gcommit<cr>
+nnoremap <leader>p :Git push origin master<cr>
 " -------------------------------------------------------------------
 " airline configuration
 " -------------------------------------------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dracula'
+" -------------------------------------------------------------------
+" Gruvbox Theme Essentials
+" -------------------------------------------------------------------
+"let g:airline_theme='gruvbox'
+"let g:gruvbox_contrast_dark='medium'
 " -------------------------------------------------------------------
 " Add indent guides based on tabs
 set list
